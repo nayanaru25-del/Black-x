@@ -1,0 +1,72 @@
+.package-card{
+  width:260px;
+  background:#111;
+  border:1px solid #2c2c2c;
+  border-radius:20px;
+  padding:20px;
+  text-align:center;
+  color:white;
+  position:relative;
+  overflow:hidden;
+  transition:.3s;
+}
+
+.package-card:hover{
+  box-shadow:0 0 25px rgba(255,0,0,.5);
+}
+
+.package-logo{
+  width:70px;
+  height:70px;
+  object-fit:contain;
+  margin-bottom:15px;
+}
+
+.package-card h2{
+  margin:10px 0;
+}
+
+.package-card h3{
+  color:#ff3b3b;
+  font-size:28px;
+}
+
+.package-card ul{
+  list-style:none;
+  padding:0;
+  margin:20px 0;
+}
+
+.package-card li{
+  margin:8px 0;
+  color:#ddd;
+}
+
+.buy-btn{
+  width:100%;
+  padding:12px;
+  border:none;
+  border-radius:12px;
+  background:#ff2d2d;
+  color:white;
+  cursor:pointer;
+  font-size:16px;
+  transition:.3s;
+}
+
+.buy-btn:hover{
+  background:#ff5555;
+  transform:scale(1.05);
+}
+
+.badge{
+  position:absolute;
+  top:15px;
+  right:15px;
+  background:#ffd700;
+  color:black;
+  padding:5px 10px;
+  border-radius:20px;
+  font-size:12px;
+  font-weight:bold;
+}
