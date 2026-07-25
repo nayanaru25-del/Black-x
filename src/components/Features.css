@@ -1,77 +1,68 @@
-
-
 .support-section{
-    padding:100px 20px;
-    background:#050816;
+    background:#070707;
+    padding:180px 20px 100px;
+}
+
+.support-container{
+    max-width:900px;
+    margin:auto;
     text-align:center;
 }
 
 .support-title{
-    font-size:clamp(32px,5vw,48px);
-    color:#00f5ff;
-    margin-bottom:10px;
+    font-size:48px;
+    color:#fff;
+    margin-bottom:15px;
     font-weight:800;
 }
 
 .support-subtitle{
-    color:#9ca3af;
-    font-size:18px;
+    color:#bdbdbd;
     margin-bottom:50px;
+    font-size:18px;
 }
 
 .support-card{
-    max-width:750px;
-    margin:auto;
-    padding:45px;
+    background:#111;
+    border:1px solid #222;
     border-radius:24px;
-    background:rgba(16,24,39,.92);
-    border:1px solid rgba(0,245,255,.18);
-    backdrop-filter:blur(15px);
+    padding:45px;
+    box-shadow:0 20px 40px rgba(0,0,0,.35);
 }
 
-.telegram-title,
-.instagram-title{
-    font-size:30px;
+.support-card h2{
+    color:#ff2d2d;
     margin-bottom:15px;
 }
 
-.telegram-title{
-    color:#22c55e;
-}
-
-.instagram-title{
-    color:#ff4da6;
-}
-
-.support-text{
-    color:#b8c0cc;
+.support-card p{
+    color:#d1d5db;
+    line-height:1.8;
     margin-bottom:25px;
-    line-height:1.7;
 }
 
 .telegram-btn,
 .community-btn,
 .instagram-btn{
     display:block;
-    width:100%;
-    max-width:360px;
+    width:280px;
     margin:18px auto;
-    padding:16px;
+    padding:15px;
     border-radius:50px;
     text-decoration:none;
-    font-weight:700;
+    font-weight:bold;
     transition:.3s;
 }
 
 .telegram-btn{
-    background:linear-gradient(90deg,#00f5ff,#2563eb);
+    background:#229ED9;
     color:white;
 }
 
 .community-btn{
-    background:#101827;
-    color:#00f5ff;
-    border:1px solid rgba(0,245,255,.25);
+    background:#1b1b1b;
+    color:white;
+    border:1px solid #333;
 }
 
 .instagram-btn{
@@ -82,49 +73,48 @@
 .telegram-btn:hover,
 .community-btn:hover,
 .instagram-btn:hover{
-    transform:translateY(-4px);
+    transform:translateY(-3px);
 }
 
-.support-divider{
+.support-card hr{
+    border:1px solid #222;
     margin:40px 0;
-    border:1px solid #1f2937;
 }
 
 .availability-box{
-    margin-top:45px;
-    padding:22px;
+    margin-top:35px;
+    background:#171717;
     border-radius:18px;
-    background:#0b1220;
-    border:1px solid rgba(0,245,255,.15);
+    padding:25px;
 }
 
 .availability-box h3{
     color:#22c55e;
-    margin-bottom:12px;
+    margin-bottom:15px;
 }
 
 .availability-box p{
-    color:#d1d5db;
-    line-height:2;
+    margin:0;
 }
 
 @media(max-width:768px){
 
 .support-section{
-padding:80px 18px;
+padding:120px 15px 70px;
+}
+
+.support-title{
+font-size:34px;
 }
 
 .support-card{
 padding:25px;
 }
 
-.telegram-title,
-.instagram-title{
-font-size:24px;
-}
-
-.support-subtitle{
-font-size:16px;
+.telegram-btn,
+.community-btn,
+.instagram-btn{
+width:100%;
 }
 
 }
