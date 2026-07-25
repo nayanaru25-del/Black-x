@@ -1,0 +1,128 @@
+.support-section{
+    padding:100px 20px;
+    background:#050816;
+    text-align:center;
+}
+
+.support-title{
+    font-size:clamp(32px,5vw,48px);
+    color:#00f5ff;
+    margin-bottom:10px;
+    font-weight:800;
+}
+
+.support-subtitle{
+    color:#9ca3af;
+    font-size:18px;
+    margin-bottom:50px;
+}
+
+.support-card{
+    max-width:750px;
+    margin:auto;
+    padding:45px;
+    border-radius:24px;
+    background:rgba(16,24,39,.92);
+    border:1px solid rgba(0,245,255,.18);
+    backdrop-filter:blur(15px);
+}
+
+.telegram-title,
+.instagram-title{
+    font-size:30px;
+    margin-bottom:15px;
+}
+
+.telegram-title{
+    color:#22c55e;
+}
+
+.instagram-title{
+    color:#ff4da6;
+}
+
+.support-text{
+    color:#b8c0cc;
+    margin-bottom:25px;
+    line-height:1.7;
+}
+
+.telegram-btn,
+.community-btn,
+.instagram-btn{
+    display:block;
+    width:100%;
+    max-width:360px;
+    margin:18px auto;
+    padding:16px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:700;
+    transition:.3s;
+}
+
+.telegram-btn{
+    background:linear-gradient(90deg,#00f5ff,#2563eb);
+    color:white;
+}
+
+.community-btn{
+    background:#101827;
+    color:#00f5ff;
+    border:1px solid rgba(0,245,255,.25);
+}
+
+.instagram-btn{
+    background:linear-gradient(90deg,#833AB4,#E1306C,#FCAF45);
+    color:white;
+}
+
+.telegram-btn:hover,
+.community-btn:hover,
+.instagram-btn:hover{
+    transform:translateY(-4px);
+}
+
+.support-divider{
+    margin:40px 0;
+    border:1px solid #1f2937;
+}
+
+.availability-box{
+    margin-top:45px;
+    padding:22px;
+    border-radius:18px;
+    background:#0b1220;
+    border:1px solid rgba(0,245,255,.15);
+}
+
+.availability-box h3{
+    color:#22c55e;
+    margin-bottom:12px;
+}
+
+.availability-box p{
+    color:#d1d5db;
+    line-height:2;
+}
+
+@media(max-width:768px){
+
+.support-section{
+padding:80px 18px;
+}
+
+.support-card{
+padding:25px;
+}
+
+.telegram-title,
+.instagram-title{
+font-size:24px;
+}
+
+.support-subtitle{
+font-size:16px;
+}
+
+}

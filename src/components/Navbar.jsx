@@ -1,10 +1,17 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 function Navbar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const closeMenu = () => setIsMenuOpen(false);
+
   return (
     <nav className="navbar">
+      {/* Logo */}
       <Link
         to="/"
+        onClick={closeMenu}
         style={{ textDecoration: "none", color: "inherit" }}
       >
         <h2 className="logo">
@@ -12,35 +19,47 @@ function Navbar() {
         </h2>
       </Link>
 
-      <ul className="nav-links">
+      {/* Navigation Links */}
+      <ul className={isMenuOpen ? "nav-links active" : "nav-links"}>
         <li>
-          <Link to="/" style={linkStyle}>
+          <Link to="/" style={linkStyle} onClick={closeMenu}>
             Home
           </Link>
         </li>
 
         <li>
-          <Link to="/about" style={linkStyle}>
+          <Link to="/about" style={linkStyle} onClick={closeMenu}>
             About
           </Link>
         </li>
 
         <li>
-          <Link to="/support" style={linkStyle}>
+          <Link to="/support" style={linkStyle} onClick={closeMenu}>
             Support
           </Link>
         </li>
 
         <li>
-          <Link to="/contact" style={linkStyle}>
+          <Link to="/contact" style={linkStyle} onClick={closeMenu}>
             Contact
           </Link>
         </li>
       </ul>
 
-      <Link to="/mastercard">
-        <button className="btn">Get Started</button>
-      </Link>
+      {/* Right Side */}
+      <div className="nav-right">
+        <Link to="/mastercard">
+          <button className="btn">Get Started</button>
+        </Link>
+
+        <button
+          className="menu-icon"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          aria-label="Toggle navigation menu"
+        >
+          ☰
+        </button>
+      </div>
     </nav>
   );
 }
