@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Features from "./components/Features";
+import LivePurchase from "./components/LivePurchase";
 
 import Mastercard from "./pages/Mastercard";
 import Visa from "./pages/Visa";
@@ -26,6 +27,7 @@ function Home() {
       <Navbar />
       <Hero />
       <Features />
+      <LivePurchase />
     </>
   );
 }
