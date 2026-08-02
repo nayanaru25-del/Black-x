@@ -1,7 +1,7 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import qrImage from "../assets/qr.png";
+import QRCode from "react-qr-code";
 
 function Checkout() {
   const { state } = useLocation();
@@ -235,47 +235,60 @@ return (
           </div>
 
           <motion.div
-            initial={{ scale: 0.8 }}
-            animate={{ scale: 1 }}
-            transition={{ duration: 0.4 }}
-            style={{
-              width: "220px",
-              height: "220px",
-              background: "#fff",
-              margin: "0 auto",
-              padding: "10px",
-              borderRadius: "15px",
-              boxShadow: "0 0 25px rgba(0,245,255,.3)",
-            }}
-          >
-            <img
-              src={qrImage}
-              alt="QR"
-              style={{
-                width: "100%",
-                height: "100%",
-                objectFit: "contain",
-              }}
-            />
-          </motion.div>
+  initial={{ scale: 0.8 }}
+  animate={{ scale: 1 }}
+  transition={{ duration: 0.4 }}
+  style={{
+    width: "220px",
+    background: "#fff",
+    margin: "0 auto",
+    padding: "15px",
+    borderRadius: "15px",
+    boxShadow: "0 0 25px rgba(0,245,255,.3)",
+  }}
+>
+  <QRCode
+    size={190}
+    value={`upi://pay?pa=nayanaru@axl&pn=BlackX&am=${price}&cu=INR`}
+    style={{
+      width: "100%",
+      height: "auto",
+    }}
+  />
+
+  <p
+    style={{
+      marginTop: "12px",
+      color: "#000",
+      fontWeight: "bold",
+      fontSize: "16px",
+    }}
+  >
+    ₹ {price}
+  </p>
+</motion.div>
 
           <motion.button
-            whileHover={{ scale: 1.03 }}
-            whileTap={{ scale: 0.97 }}
-            style={{
-              width: "100%",
-              marginTop: "20px",
-              padding: "14px",
-              border: "none",
-              borderRadius: "12px",
-              background: "#00f5ff",
-              color: "#000",
-              fontWeight: "bold",
-              cursor: "pointer",
-            }}
-          >
-            📋 Copy UPI ID
-          </motion.button>
+  whileHover={{ scale: 1.03 }}
+  whileTap={{ scale: 0.97 }}
+  onClick={() => {
+    navigator.clipboard.writeText("nayanaru@axl");
+    alert("UPI ID Copied!");
+  }}
+  style={{
+    width: "100%",
+    marginTop: "20px",
+    padding: "14px",
+    border: "none",
+    borderRadius: "12px",
+    background: "#00f5ff",
+    color: "#000",
+    fontWeight: "bold",
+    cursor: "pointer",
+  }}
+>
+  📋 Copy UPI ID (nayanaru@axl)
+</motion.button>
                     <div
             style={{
               marginTop: "25px",
